@@ -1,0 +1,42 @@
+[data-ico] {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  transform: translateZ(200px);
+}
+
+[data-ico]:before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+[data-ico="tg"]:before {
+  background-image: url("./../../../src/Images/tg.svg");
+}
+
+[data-ico="tw"]:before {
+  background-image: url("./../../../src/Images/tw.svg");
+}
+
+[data-ico="eth"]:before {
+  background-image: url("./../../../src/Images/etherscan.svg");
+}
+
+[data-ico="discord"]:before {
+  background-image: url("./../../../src/Images/discord.svg");
+}
+
+[data-ico="medium"]:before {
+  background-image: url("./../../../src/Images/medium.svg");
+}
+
+[data-ico="wl"]:before {
+  background-image: url("./../../../src/Images/wl.svg");
+}

@@ -1,0 +1,54 @@
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0 var(--accent);
+  }
+}
+
+@keyframes whitePulse {
+  from {
+    box-shadow: 0 0 0 0 var(--negative);
+  }
+}
+
+@keyframes blackPulse {
+  from {
+    box-shadow: 0 0 0 0 var(--primary);
+  }
+}
+
+@keyframes hollowPulse {
+  from {
+    box-shadow: 0 0 0 0 rgba(var(--primary-rgb),.2);
+  }
+}
+
+@keyframes hollowPulseNegative {
+  from {
+    box-shadow: 0 0 0 0 rgba(var(--negative-rgb),.2);
+  }
+}
+
+@keyframes pattern {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -30px; /* The image width */
+  }
+}
+
+@keyframes bounce {
+  70% { transform:translateY(0%); }
+  80% { transform:translateY(-13%); }
+  90% { transform:translateY(0%); }
+  95% { transform:translateY(-5%); }
+  97% { transform:translateY(0%); }
+  99% { transform:translateY(-2%); }
+  100% { transform:translateY(0); }
+}
+
+@keyframes shake {
+  0%, 100% {transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+  20%, 40%, 60%, 80% {transform: translateX(10px);}
+}

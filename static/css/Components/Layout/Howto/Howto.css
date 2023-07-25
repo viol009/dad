@@ -1,0 +1,247 @@
+.steps-list {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--v-medium);
+}
+
+.steps-list .incl > p {
+  margin-bottom: var(--gutter);
+}
+
+.controller {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: calc(var(--v-large) / -1)
+}
+
+.controller .btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(9deg) translateX(-50%);
+  border-width: 3px;
+  left: 50%;
+  top: 52%;
+  width: 27%;
+  height: 13%;
+  font-size: var( --btn-huge);
+}
+
+.controller .speach .bubble:before,
+.controller .speach .bubble:after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  left: 75%;
+  top: 100%;
+  transform: translateX(-50%);
+}
+
+.controller .speach .bubble:before {
+  border-width: 0 16px 55px 0;
+  border-color: transparent var(--negative) transparent transparent;
+}
+
+.controller .speach .bubble:after {
+  border-width: 0 13px 42px 0;
+  border-color: transparent var(--white) transparent transparent;
+}
+
+
+.steps-list .speach > .bubble + .bubble:before,
+.steps-list .speach > .bubble + .bubble:after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  left: 75%;
+  top: 0;
+  transform: translate(-50%, -100%);
+}
+
+.steps-list .speach > .bubble + .bubble:before {
+  border-width: 0 16px 55px 0;
+  border-color:  transparent transparent var(--negative) transparent;
+}
+
+.steps-list .speach > .bubble + .bubble:after {
+  border-width: 0 13px 42px 0;
+  border-color: transparent transparent var(--white) transparent;
+}
+
+@media (max-width: 1023px) {
+  .steps-list li div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .steps-list img {
+    order: 1;
+  }
+
+  .steps-list .speach {
+    position: relative;
+    order: 2;
+    margin-bottom: var(--v-medium);
+  }
+
+  .steps-list .speach .bubble {
+    position: relative;
+  }
+
+  .steps-list .speach .bubble + .bubble {
+    margin-top: var(--v-small);
+  }
+
+  .controller .speach {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 55%;
+    transform: translate(15%, 200%);
+  }
+
+  .controller .speach .bubble {
+    position: relative;
+  }
+
+  .controller .speach .bubble:first-child {
+    margin-bottom: var(--v-small);
+    z-index: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .steps-list .speach {
+    width: 90%;
+  }
+
+  .steps-list .speach .bubble + .bubble {
+    margin-top: var(--v-medium);
+  }
+
+  .controller .speach {
+    position: relative;
+    margin-top: calc(var(--v-medium));
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    left: 50%;
+    transform: translate(-55%, 83%);
+  }
+
+  .controller .btn {
+    top: 55%;
+  }
+
+  .controller .btn:before,
+  .controller .btn:after {
+    display: none;
+  }
+
+  .controller .speach .bubble:first-child {
+    margin-bottom: var(--v-medium);
+    z-index: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .steps-list {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .steps-list {
+    padding-bottom: calc(var(--v-large) * 2);
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+
+  .steps-list img {
+    width: 25vw;
+  }
+
+  .steps-list > li {
+    position: relative;
+    display: block;
+    width: 50%;
+  }
+
+  .steps-list > li:nth-child(even) {
+    transform: translateY(calc(var(--v-large)*3));
+    margin-bottom: calc(var(--v-medium) * 5);
+    text-align: right;
+  }
+
+  .steps-list > li:nth-child(odd) .speach {
+    top: 10%;
+    left: 50%;
+  }
+
+  .steps-list > li:nth-child(odd) .speach > .bubble + .bubble {
+    left: 10%;
+  }
+
+  .steps-list > li:nth-child(even) .speach {
+    top: 50%;
+    right: 50%;
+    transform: translateY(-50%);
+  }
+
+  .steps-list > li:nth-child(even) .speach > .bubble + .bubble {
+    right: 10%;
+  }
+
+  .steps-list .speach {
+    position: absolute;
+  }
+
+  .controller .speach {
+    position: absolute;
+    top: 19%;
+    left: 53%;
+  }
+
+  .controller .btn {
+    left: 50%;
+    top: 52%;
+  }
+
+  .controller .speach > .bubble:first-child,
+  .steps-list .speach > .bubble:first-child {
+    position: relative;
+    width: 380px;
+  }
+
+  .controller .speach > .bubble + .bubble,
+  .steps-list .speach > .bubble + .bubble {
+    position: absolute;
+    top: calc(100% + 32px);
+    width: 320px;
+  }
+}
+
+@media (min-width: 1441px) {
+  .steps-list {
+    padding-bottom: var(--v-large);
+  }
+
+  .controller .btn {
+    left: 50%;
+    top: 55%;
+  }
+
+  .steps-list img {
+    width: 532px;
+  }
+
+  .steps-list > li:nth-child(even) {
+    transform: translateY(var(--v-large));
+    margin-bottom: var(--v-medium);
+  }
+}

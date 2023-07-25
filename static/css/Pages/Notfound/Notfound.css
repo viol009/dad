@@ -1,0 +1,62 @@
+#error {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: var(--v-large);
+  text-align: center;
+}
+
+#error:after {
+  position: absolute;
+  display: block;
+  content: "";
+  left: 5px;
+  bottom: 0;
+  height: 0;
+  border-bottom: 1px dashed rgba(255,255,255, .5);
+  width: calc(100% - 10px);
+}
+
+[data-displace] {
+  position: relative;
+  display: inline-block;
+}
+
+[data-displace] span {
+  display: block;
+  width: 100%;
+  color: var(--negative);
+}
+
+[data-displace] > span {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-displace] > span > span {
+  transition: all 200ms ease-in-out;
+}
+
+[data-displace] > span > span:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-120%);
+}
+
+[data-displace]:hover > span > span:first-child {
+  transform: translateY(120%);
+}
+
+[data-displace]:hover > span > span:last-child {
+  transform: translateY(0);
+}
+
+[data-displace] > a {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}

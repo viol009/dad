@@ -1,0 +1,125 @@
+#roadmap {
+  position: relative;
+}
+
+.roadsteps {
+  position: relative;
+  margin-top: var(--v-large);
+  padding-bottom: calc(var(--v-large)*4);
+}
+
+.roadpath {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.roadpath img {
+  width: 100%;
+  height: 100%;
+}
+
+.steplist {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  z-index: 1;
+  transform: translateY(calc(var(--v-large) / -2));
+}
+
+.roadmap-heading {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  pointer-events: none;
+}
+
+.guide {
+  margin-top: var(--v-medium);
+  width: 100%;
+}
+
+.guide .step {
+  display: flex;
+}
+
+.fsteps {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--gutter);
+  padding-left: var(--gutter);
+  width: 100%;
+  max-width: var(--global-width);
+  text-align: left;
+}
+
+.large-lbl {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--v-small);
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 90px;
+  border: 3px dashed var(--accent);
+  padding: var(--btn-huge-padding);
+  color: var(--accent);
+  width: 100%;
+}
+
+.large-lbl.negative {
+  background-color: var(--negative);
+  transform: rotate(-5deg);
+}
+
+.large-lbl.light {
+  background-color: var(--primary);
+  transform: rotate(2deg);
+}
+
+.large-lbl.light h4 {
+  margin-bottom: var(--v-medium);
+}
+
+@media (min-width: 768px) {
+  .large-lbl {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .roadpath {
+    margin-right: calc(var(--global-padding) * -1);
+    margin-left: calc(var(--global-padding) * -1);
+    width: calc(var(--global-padding) * 2 + 100%);
+  }
+
+  .roadpath img {
+    object-fit: cover;
+  }
+
+  .roadmap-heading {
+    margin-right: auto;
+    margin-left: auto;
+    width: 75%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .large-lbl {
+    width: 75%;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .large-lbl {
+    width: 50%;
+  }
+}
+

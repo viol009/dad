@@ -1,0 +1,114 @@
+[data-ico="clipboard"] {
+  margin-left: calc(var(--gutter) / 3);
+  width: 24px;
+  height: 24px;
+}
+
+[data-ico="clipboard"]:before {
+  background-image: url("./../../../src/Images/clipboard.svg");
+}
+
+.clipboard {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  cursor: pointer;
+  font-family: var(--special);
+  font-size: 16px;
+}
+
+#how .clipboard,
+.hero-footer .clipboard {
+  font-family: var(--heading);
+  font-size: var(--h4);
+  line-height: calc(var(--h4) * 1.4);
+  color: var(--accent);
+}
+
+#how .contractCopy,
+.hero-footer .contractCopy {
+  border-radius: var(--label-radius);
+  background-color: var(--negative);
+  padding: calc(var(--gutter) * 1.9) var(--gutter);
+}
+
+.clipboard:hover {
+  text-decoration: underline;
+}
+
+.contractCopy {
+  position: relative;
+  z-index: 2;
+}
+
+.contractCopy .message {
+  position: absolute;
+  font-size: var(--btn-tiny);
+  padding: var(--btn-tiny-padding);
+  background: var(--accent);
+  color: var(--negative);
+  left: 50%;
+  bottom: 100%;
+  transform: translate(-50%, -50%);
+  border-radius: var(--btn-radius);
+  border: 1px solid var(--negative);
+  box-shadow: inset 0 0 0 5px var(--h-accent);
+}
+
+#how .contractCopy,
+.hero-footer .contractCopy {
+  position: relative;
+  color: var(--negative);
+}
+
+#how .contractCopy {
+  position: absolute;
+  top: calc(100% - var(--gutter));
+  left: 10px;
+}
+
+#how .clipboard {
+  white-space: nowrap;
+}
+
+.hero-footer .contractCopy [data-ico="clipboard"]:before,
+.steps-list .contractCopy [data-ico="clipboard"]:before {
+  background-image: url("./../../../src/Images/clipboardlarge.svg");
+}
+
+@media (max-width: 640px) {
+  .clipboard .reduced {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 220px;
+  }
+}
+
+@media (min-width: 768px) {
+  #how .contractCopy,
+  .hero-footer .contractCopy {
+    padding: calc(var(--gutter) / 2) var(--gutter);
+  }
+}
+
+@media (min-width: 1024px) {
+  .clipboard {
+    font-size: 21px;
+  }
+
+  #how .clipboard [data-ico="clipboard"],
+  .hero-footer .contractCopy [data-ico="clipboard"] {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+}
+
+@media (min-width: 1921px) {
+  #how .clipboard [data-ico="clipboard"],
+  .hero-footer .contractCopy [data-ico="clipboard"] {
+    width: 53px;
+    height: 53px;
+  }
+}

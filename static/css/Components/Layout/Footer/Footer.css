@@ -1,0 +1,77 @@
+.footer {
+  position: relative;
+  padding-top: var(--v-medium);
+  padding-bottom: var(--v-medium);
+  font-family: var(--body);
+  font-size: 12px;
+}
+
+.footer a {
+  color: var(--negative);
+}
+
+.footer .copy {
+  font-size: 16px;
+}
+
+.footer .info {
+  font-size: 12px;
+}
+
+.footer .info > .copy *:not(:last-child) {
+  margin-right: 20px;
+}
+
+.disclaimer {
+  margin-top: var(--v-small);
+  max-width: 480px;
+}
+
+.disclaimer small {
+  color: var(--negative);
+  font-size: 21px;
+  line-height: calc(14px * 1.1);
+}
+
+
+@media (max-width: 767px) {
+  .footer .contractCopy {
+    margin-top: calc(var(--gutter) / 2);
+  }
+
+  .pinksale {
+    width: 150px;
+  }
+
+  .dexview {
+    width: 108px;
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer .info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer .info > .copy *:not(:last-child) {
+    margin-right: 40px;
+  }
+  .footer .copy {
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 1760px) {
+  .footer:before {
+    width: calc(100% + ((100vw - 1760px) + var(--global-padding) * 2));
+    margin-right: calc(((100vw - 1760px) / 2 + var(--global-padding)) * -1);
+    margin-left: calc(((100vw - 1760px) / 2 + var(--global-padding)) * -1);
+  }
+}

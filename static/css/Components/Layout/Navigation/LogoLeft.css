@@ -1,0 +1,228 @@
+.logo-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--gutter);
+  margin-bottom: var(--v-small);
+  z-index: 99;
+}
+
+.logo-left .dadlogo {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 95px;
+  height: 97px;
+}
+
+.logo-left .dadlogo:before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("./../../../Images/logo.svg");
+  background-size: cover;
+  background-position: 0;
+  background-repeat: no-repeat;
+}
+
+.logo-left .quicklinks {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo-left .quicklinks .btn {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  margin-left: calc(var(--gutter) / 3);
+}
+
+.submenu a {
+  text-decoration: none;
+}
+
+.submenu a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 640px) {
+  .submenu {
+    max-width: 100%;
+  }
+
+  .logo-left .socials {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) {
+  .submenu .hide {
+    display: none;
+  }
+}
+
+
+@media (max-width: 1279px) {
+  .navigation {
+    position: relative;
+  }
+
+  .submenu {
+    position: absolute;
+    padding: var(--v-small);
+    width: 100%;
+    background-color: var(--purple);
+    border: 1px solid var(--negative);
+    color: var(--negative);
+    top: 100%;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+    transform: translateY(-25%);
+    pointer-events: none;
+    border-radius: var(--btn-radius);
+  }
+
+  .submenu.active {
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+    pointer-events: auto;
+    transform: perspective(470px) rotateY(-1deg) rotateX(12deg) rotateZ(-5deg) translateX(0px) translateY(0) scale(1);
+  }
+
+  .submenu li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .submenu a, .submenu a:hover, .submenu a:visited {
+    color: inherit;
+  }
+
+  .submenu .contractCopy {
+    display: flex;
+    justify-content: center;
+  }
+
+  #menuToggle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 54px;
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 998;
+    background-color: var(--accent);
+    border: 1px solid var(--negative);
+    box-shadow: inset 0 0 0 5px var(--h-accent);
+    transform: perspective(20px) rotateY(-1deg) rotateX(-2deg) rotateZ(3deg) translateX(0px) translateY(0px) scale(1);
+  }
+
+  #menuToggle:before {
+    display: none;
+  }
+
+  #menuToggle:after {
+    left: 20px;
+  }
+
+  #menuToggle.btn {
+    margin-top: 0;
+  }
+
+  #menuToggle span {
+    background-color: var(--negative);
+    height: 2px;
+  }
+
+  #menuToggle.active {
+    pointer-events: none;
+    background-color: var(--negative);
+    box-shadow: inset 0 0 0 5px var(--h-negative);
+  }
+
+  #menuToggle.active span {
+    background-color: var(--purple);
+  }
+
+  #menuToggle > span {
+    position: relative;
+    width: 16px;
+    -webkit-touch-callout: none;
+    z-index: 101;
+    margin-left: auto;
+  }
+
+  #menuToggle > span span {
+    position: absolute;
+    display: block;
+    width: 100%;
+  }
+
+  #menuToggle > span span:first-child {
+    margin-top: -5px;
+  }
+
+  #menuToggle > span span:last-child {
+    margin-top: 5px;
+  }
+
+  #menuToggle.active > span span {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .submenu {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo-left .dadlogo {
+    width: 215px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .submenu {
+    display: flex;
+    justify-content: center;
+    padding: var(--btn-padding);
+    padding-right: 0;
+    padding-left: 0;
+    background-color: var(--negative);
+    color: var(--accent);
+    border-radius: var(--btn-radius);
+    line-height: 1;
+  }
+
+  .navigation > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+  }
+
+  .submenu li {
+    margin-right: calc(var(--v-small)/2);
+    margin-left: calc(var(--v-small)/2);
+  }
+
+  .navigation {
+    justify-content: flex-end;
+  }
+
+  .submenu a {
+    white-space: nowrap;
+  }
+
+  #menuToggle {
+    display: none;
+  }
+}

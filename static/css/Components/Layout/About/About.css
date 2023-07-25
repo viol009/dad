@@ -1,0 +1,51 @@
+#about {
+  position: relative;
+  margin-top: 5vh;
+  background-color: var(--white);
+}
+
+.atop {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: calc(100% - 1px);
+}
+
+.abot {
+  width: 100%;
+}
+
+#about article {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--v-medium);
+}
+
+#about article h2 {
+  margin-bottom: var(--v-medium);
+}
+
+#about article p {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 670px;
+}
+
+#about h2 img {
+  width: 60.5vw;
+}
+
+@media (min-width: 1024px) {
+  #about h2 img {
+    width: 44.5vw;
+  }
+}
+
+@media (min-width: 1921px) {
+  #about h2 img {
+    width: 849px;
+  }
+}
